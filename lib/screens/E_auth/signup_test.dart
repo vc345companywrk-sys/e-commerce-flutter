@@ -25,22 +25,22 @@ class SignupTest extends StatelessWidget {
         ),
       ),
       body: SafeArea(
-        // ✅ ADDED: SafeArea for better layout
+        //SafeArea for better layout
         child: Padding(
           padding: EdgeInsets.all(16.0),
           child: Column(
             children: [
-              // ✅ FIXED: Title outside the scrollable area
+              //Title outside the scrollable area
               Text(
                 'Create Account',
                 style: TextStyle(fontSize: 24, fontWeight: FontWeight.bold),
               ),
               SizedBox(height: 20),
 
-              // ✅ FIXED: Expanded with SingleChildScrollView for scrollable content
+              //Expanded with SingleChildScrollView for scrollable content
               Expanded(
                 child: SingleChildScrollView(
-                  // ✅ ADDED: Makes content scrollable
+                  //Makes content scrollable
                   child: Obx(
                     () => Column(
                       children: [
@@ -82,7 +82,7 @@ class SignupTest extends StatelessWidget {
                         ),
                         SizedBox(height: 16),
 
-                        // Password Field
+                        //password Field
                         TextField(
                           controller: passwordController,
                           decoration: InputDecoration(
@@ -95,7 +95,7 @@ class SignupTest extends StatelessWidget {
                         ),
                         SizedBox(height: 16),
 
-                        // Confirm Password Field
+                        //Confirm Password Field
                         TextField(
                           controller: confirmPasswordController,
                           decoration: InputDecoration(
@@ -107,7 +107,7 @@ class SignupTest extends StatelessWidget {
                         ),
                         SizedBox(height: 20),
 
-                        // Error Message
+                        //error Message
                         if (authController.errorMessage.isNotEmpty)
                           Container(
                             padding: EdgeInsets.all(12),
@@ -125,7 +125,7 @@ class SignupTest extends StatelessWidget {
 
                         SizedBox(height: 20),
 
-                        // Sign Up Button
+                        // sign Up Button
                         SizedBox(
                           width: double.infinity,
                           child: ElevatedButton(
@@ -146,7 +146,7 @@ class SignupTest extends StatelessWidget {
                         ),
                         SizedBox(height: 10),
 
-                        // Login Link
+                        // login Link
                         TextButton(
                           onPressed: () => Get.back(),
                           child: Text('Already have an account? Login'),
@@ -176,7 +176,7 @@ class SignupTest extends StatelessWidget {
       return;
     }
 
-    // ✅ FIXED: Simplified email validation
+    //Simplified email validation
     if (!emailController.text.contains('@')) {
       authController.errorMessage('Please enter a valid email address');
       return;

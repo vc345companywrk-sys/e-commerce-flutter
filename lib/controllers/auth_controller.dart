@@ -237,7 +237,7 @@ class AuthController extends GetxController {
         throw Exception('Please enter your name');
       }
 
-      print('📝 Attempting sign up for: $email');
+      print('Attempting sign up for: $email');
 
       final authResponse = await supabase.auth.signUp(
         email: email.trim(),

@@ -75,7 +75,7 @@ class LoginTest extends StatelessWidget {
 
               TextButton(
                 onPressed: () =>
-                    Get.toNamed('/signup'), // ✅ This is correct, keep it
+                    Get.toNamed('/signup'), //this is correct, keep it
                 child: Text('Don\'t have an account? Sign Up'),
               ),
             ],

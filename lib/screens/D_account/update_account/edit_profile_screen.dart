@@ -65,7 +65,7 @@ class _EditProfileScreenState extends State<EditProfileScreen> {
         _selectedImagePath.value = imagePath;
         _isImageChanged.value = true;
         _removeImageRequested.value =
-            false; // Reset removal if new image selected
+            false; //Reset removal if new image selected
       }
     } catch (e) {
       Get.snackbar('Error', 'Failed to pick image: ${e.toString()}');
