@@ -10,9 +10,8 @@ class SupabaseService {
 
     // UPDATED: Remove authFlowType parameter
     await Supabase.initialize(
-      url: dotenv.env['https://iffkycfypeqxsgjzwjbx.supabase.co']!,
-      anonKey: dotenv
-          .env['eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6ImlmZmt5Y2Z5cGVxeHNnanp3amJ4Iiwicm9sZSI6ImFub24iLCJpYXQiOjE3NTgzNjk4NDMsImV4cCI6MjA3Mzk0NTg0M30.hFJBMMlmHWL0CxPINb9jbsnBM9ZxVeJher_DvEW_xws']!,
+      url: dotenv.env['SUPABASE_URL']!,
+      anonKey: dotenv.env['SUPABASE_ANON_KEY']!,
       // authFlowType parameter is no longer needed in recent versions
     );
   }
