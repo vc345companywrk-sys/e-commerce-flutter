@@ -204,6 +204,7 @@ class DetailsItem extends StatelessWidget {
                             children: List.generate(
                               descripList.length,
                               (index) => ListTile(
+                                //leading: Icon(Icons.settings),
                                 title: descripList[index].text
                                     .fontFamily(semibold)
                                     .color(darkFontGrey)

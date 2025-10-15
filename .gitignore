@@ -43,3 +43,6 @@ app.*.map.json
 /android/app/debug
 /android/app/profile
 /android/app/release
+
+backend/.env
+lib/screens/A_home/home_screen_notes.text
